@@ -5,7 +5,7 @@ This repository includes the following:
 - `Worlds\.`: The csv worlds files that are loaded when the `setup` button is pressed inm the NetLogo interface
 
 ## Open the model 
-### modelingcommons.com
+### Option 1: modelingcommons.com
 
 1. Visit [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info). You should see the following in your web browser.
 
@@ -18,8 +18,8 @@ This repository includes the following:
 3. Press on the `Click to Run Model` message. The model UI will be loaded and should show up as shown below - Note that this may take up to a minute depending on the traffic on modelingcommons.com.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/03.png)
- 
-### NetLogo Web App
+
+### Option 2: NetLogo Web App
 
 1. Download the NetLogo file through one of the following options:
     - ModelingCommons download link: [https://modelingcommons.org/browse/download_model/7502](https://modelingcommons.org/browse/download_model/7502) (make sure you export the zip file before proceeding to the next steps if you use this link)
