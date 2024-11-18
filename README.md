@@ -1,6 +1,4 @@
-![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/hotspot.png)
-
-# UK Housing Agent Based Model (ABM)
+# UK Housing Agent Based Model (ABM) Simple UI
 
 This repository includes the following:
 - `Housing_Market_Model_S19.0.15e.nlogo`: A UK housing ABM with a simplified user interface. The model is also available on modelingcommons.com in the following link: [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_nlw](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_nlw)
@@ -31,7 +29,7 @@ This repository includes the following:
 
 2. Go to [https://netlogoweb.org/launch](https://netlogoweb.org/launch). This will load a random sample NetLogo model that you can ignore for now.
 
-3. At the top of the page, press on the `Browse...` button as shown below. A window will open; navigate in that window to the Directory where you saved the NetLogo file you downloaded in step 1
+3. At the top of the page, press on the `Browse...` button as shown below. A window will open; navigate in that window to the Directory where you saved the NetLogo file you downloaded in step 1, select the NetLogo file and press `open`.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/05.png)
 
