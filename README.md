@@ -33,8 +33,10 @@ This repository includes the following:
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/05.png)
 
-## Running the model
+## Run the model
 
 To run the model, first press on the `setup` button and then press on the `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time. Also, please note that pressing `setup` will always revert back the parameters to the baseline values.
+
+![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/06.png)
 
 Note: For the full model, you can visit [https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public](https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public).
