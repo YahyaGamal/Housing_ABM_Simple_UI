@@ -4,7 +4,8 @@ This repository includes the following:
 - `Housing_Market_Model_S19.0.15e.nlogo`: A UK housing ABM with a simplified user interface. The model is also available on modelingcommons.com in the following link: [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_nlw](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_nlw)
 - `Worlds\.`: The csv worlds files that are loaded when the `setup` button is pressed inm the NetLogo interface
 
-## Open the model modelingcommons.com
+## Open the model 
+### modelingcommons.com
 
 1. Visit [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info). You should see the following in your web browser.
 
@@ -17,8 +18,8 @@ This repository includes the following:
 3. Press on the `Click to Run Model` message. The model UI will be loaded and should show up as shown below - Note that this may take up to a minute depending on the traffic on modelingcommons.com.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/03.png)
-
-## Open the model on NetLogo Web App
+ 
+### NetLogo Web App
 
 1. Download the NetLogo file through one of the following options:
     - ModelingCommons download link: [https://modelingcommons.org/browse/download_model/7502](https://modelingcommons.org/browse/download_model/7502) (make sure you export the zip file before proceeding to the next steps if you use this link)
@@ -35,7 +36,7 @@ This repository includes the following:
 
 ## Run the model
 
-To run the model, first press on the `setup` button and then press on the `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time. Also, please note that pressing `setup` will always revert back the parameters to the baseline values.
+To run the model, first press on the `Setup` button and then press on the `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time. Also, please note that pressing `setup` will always revert back the parameters to the baseline values.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/06.png)
 
