@@ -36,8 +36,17 @@ This repository includes the following:
 
 ## Run the model
 
-To run the model, first press on the `Setup` button and then press on the `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time. Also, please note that pressing `setup` will always revert back the parameters to the baseline values.
+To run the model, follow the following steps:
+1. Press on `Setup step 1` button. This will load a NetLogo world as shown below.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/06.png)
 
-Note: For the full model, you can visit [https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public](https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public).
+2. Press on `Setup step 2` button. This will take a while to be loaded, but once done it will (a) change the `VisualiseMode` to "Prices"; (b) update the visualisation of the houses based on their prices as shown below; and (3) prepare the graphs to monitor the changes in the model.
+
+![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/07.png)
+
+3. Press on `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time.
+
+## Notes
+
+For the full model, you can visit [https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public](https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public).
