@@ -1293,7 +1293,7 @@ to setup
   set setup? false
 end
 
-to simplified-setup
+to simplified-setup-step-1
   clear-all
   reset-ticks
   if baseline-type = "3-month tick" [
@@ -1307,6 +1307,13 @@ to simplified-setup
   clear-all-plots
   random-seed new-seed
   type "Finished setup process\n"
+end
+
+to simplified-setup-step-2
+  reset-ticks
+  ask realtors [draw-circle RealtorTerritory]
+  set visualiseMode "Prices"
+  update-visualisation
 end
 
 to build-public-sectors
@@ -4888,12 +4895,12 @@ end
 to update-visualisation
   if visualiseModeCurrent != VisualiseMode [
     if visualiseMode = "Prices" [
-      ;ask houses with [myType = "mortgage"] [set size 0.9 set color scale-color red sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"])]
-      ;ask houses with [myType = "rent"] [set size 0.9 set color scale-color blue rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"])]
-      ;ask houses with [myType = "social"] [set size 0.9 set color scale-color green rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"])]
-      ask houses with [myType = "mortgage"] [set size 0.9 set color (palette:scale-gradient [[255 100 100] [180 0 0]] sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"]) )]
-      ask houses with [myType = "rent"] [set size 0.9 set color (palette:scale-gradient [[100 100 255] [0 0 180]] rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"]) )]
-      ask houses with [myType = "social"] [set size 0.9 set color (palette:scale-gradient [[100 255 100] [0 180 0]] rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"]) )]
+      ask houses with [myType = "mortgage"] [set size 0.9 set color scale-color red sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"])]
+      ask houses with [myType = "rent"] [set size 0.9 set color scale-color blue rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"])]
+      ask houses with [myType = "social"] [set size 0.9 set color scale-color green rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"])]
+;      ask houses with [myType = "mortgage"] [set size 0.9 set color (palette:scale-gradient [[255 100 100] [180 0 0]] sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"]) )]
+;      ask houses with [myType = "rent"] [set size 0.9 set color (palette:scale-gradient [[100 100 255] [0 0 180]] rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"]) )]
+;      ask houses with [myType = "social"] [set size 0.9 set color (palette:scale-gradient [[100 255 100] [0 180 0]] rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"]) )]
       set visualiseModeCurrent "Prices"
     ]
     if visualiseMode = "Types" [
@@ -4919,9 +4926,12 @@ end
 ; force the model to revisualise even if the visualise mode has not changed (only used to update prices when modified)
 to force-update-visualisation
   if visualiseMode = "Prices" [
-    ask houses with [myType = "mortgage"] [set size 0.9 set color (palette:scale-gradient [[255 100 100] [180 0 0]] sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"]) )]
-    ask houses with [myType = "rent"] [set size 0.9 set color (palette:scale-gradient [[100 100 255] [0 0 180]] rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"]) )]
-    ask houses with [myType = "social"] [set size 0.9 set color (palette:scale-gradient [[100 255 100] [0 180 0]] rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"]) )]
+    ask houses with [myType = "mortgage"] [set size 0.9 set color scale-color red sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"])]
+    ask houses with [myType = "rent"] [set size 0.9 set color scale-color blue rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"])]
+    ask houses with [myType = "social"] [set size 0.9 set color scale-color green rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"])]
+;    ask houses with [myType = "mortgage"] [set size 0.9 set color (palette:scale-gradient [[255 100 100] [180 0 0]] sale-price (max [sale-price] of houses with [mytype = "mortgage"]) (min [sale-price] of houses with [mytype = "mortgage"]) )]
+;    ask houses with [myType = "rent"] [set size 0.9 set color (palette:scale-gradient [[100 100 255] [0 0 180]] rent-price (max [rent-price] of houses with [mytype = "rent"]) (min [rent-price] of houses with [mytype = "rent"]) )]
+;    ask houses with [myType = "social"] [set size 0.9 set color (palette:scale-gradient [[100 255 100] [0 180 0]] rent-price (max [rent-price] of houses with [mytype = "social"]) (min [rent-price] of houses with [mytype = "social"]) )]
     set visualiseModeCurrent "Prices"
   ]
   if visualiseMode = "Types" [
@@ -5319,10 +5329,10 @@ HORIZONTAL
 BUTTON
 215
 494
-302
+327
 533
-Setup
-simplified-setup
+Setup step 1
+simplified-setup-step-1
 NIL
 1
 T
@@ -5433,9 +5443,9 @@ PENS
 
 BUTTON
 215
-538
-302
-575
+581
+328
+618
 go nYears
 go\nif (ticks / TicksPerYear) >= nYears [stop]
 T
@@ -5449,10 +5459,10 @@ NIL
 1
 
 INPUTBOX
-305
+331
 495
-393
-575
+419
+618
 nYears
 300.0
 1
@@ -5496,9 +5506,9 @@ Blue: Rent house
 
 BUTTON
 424
-540
+539
 606
-574
+618
 Update visualisation
 update-visualisation
 NIL
@@ -5519,7 +5529,7 @@ CHOOSER
 VisualiseMode
 VisualiseMode
 "Types" "Prices" "Hotspot prices (Getis-Ord)"
-0
+1
 
 TEXTBOX
 272
@@ -5543,9 +5553,9 @@ Types |
 
 BUTTON
 216
-644
+682
 296
-704
+742
 go nYears
 go\nif (ticks / TicksPerYear) = mYear [\nset InterestRate mInterest\nset InterestRateFirstTime mInterest\nset InterestRateBTL mInterest\nset InterestRateRTB mInterest\n]\nif (ticks / TicksPerYear) >= nYears [stop]
 T
@@ -5560,9 +5570,9 @@ NIL
 
 INPUTBOX
 377
-645
+683
 456
-705
+743
 mYear
 10.0
 1
@@ -5571,9 +5581,9 @@ Number
 
 INPUTBOX
 297
-645
+683
 377
-705
+743
 mInterest
 8.0
 1
@@ -5599,9 +5609,9 @@ NIL
 
 BUTTON
 216
-769
+807
 295
-828
+866
 go nYears
 go\nif (ticks / TicksPerYear) = mYear [\nset MaxLoanToValue mLTV\nset MaxLoanToValueFirstTime mLTV\nset MaxLoanToValueBTL mLTV-BTL\nset MaxLoanToValueRTB mLTV\n]\nif (ticks / TicksPerYear) >= nYears [stop]
 T
@@ -5616,9 +5626,9 @@ NIL
 
 INPUTBOX
 297
-769
+807
 377
-829
+867
 mLTV
 90.0
 1
@@ -5676,9 +5686,9 @@ InheritanceTax?
 
 TEXTBOX
 219
-601
+639
 609
-631
+669
 Change interest rate during the run (use go button below)
 12
 0.0
@@ -5794,9 +5804,9 @@ Change visaulisation mode (\"Types\" or \"Prices\" recommended during runs)
 
 TEXTBOX
 219
-622
+660
 612
-648
+686
 At mYear, InterestRate = mInterest
 10
 0.0
@@ -5804,9 +5814,9 @@ At mYear, InterestRate = mInterest
 
 TEXTBOX
 215
-728
+766
 589
-747
+785
 Change Loan-To-Value (LTV) during the run (use go button below)
 10
 0.0
@@ -5814,9 +5824,9 @@ Change Loan-To-Value (LTV) during the run (use go button below)
 
 TEXTBOX
 215
-743
+781
 615
-761
+799
 At mYear, MaxLoanToValue = mLTV
 10
 0.0
@@ -5880,9 +5890,9 @@ PENS
 
 INPUTBOX
 377
-769
+807
 457
-829
+867
 mYear
 10.0
 1
@@ -5907,6 +5917,23 @@ TEXTBOX
 Prices |
 10
 0.0
+1
+
+BUTTON
+216
+538
+327
+576
+Setup step 2
+simplified-setup-step-2
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
 1
 
 @#$#@#$#@
