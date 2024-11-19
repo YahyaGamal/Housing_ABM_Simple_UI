@@ -103,6 +103,10 @@ globals[
   investors                  ;; fraction of investors in the system (added to modify the UI to use percentage)
   inheritance-tax?           ;; inheritance tax on or off (added to change the parameter to camel case in the UI)
 
+  ; The next globals have been added to the simplified version to avoid errors on the NetLogo web app
+  setup-a
+  setup-b
+
   ; The next globals have been removed from the simplified version interface
   Affordability
 
@@ -244,7 +248,6 @@ globals[
   TargetOwnedPercent
   TicksPerYear
   upgrade-tenancy
-
 
 
 ]
@@ -801,6 +804,8 @@ to simplified-reset
 end
 
 to reset
+  set setup-a 0
+  set setup-b 0
   ;; 19.0.14 baseline
   if baseline-type = "Weekly step" [
     set Affordability 33
@@ -1296,6 +1301,7 @@ end
 to simplified-setup-step-1
   clear-all
   reset-ticks
+  type "Applied Setup step 1\n"
   if baseline-type = "3-month tick" [
     fetch:url-async "https://raw.githubusercontent.com/YahyaGamal/Housing_ABM_Simple_UI/refs/heads/main/Worlds/S19.0.16d_world_300years_3monthsTick_clean.csv" import-a:world
   ]
@@ -1306,7 +1312,7 @@ to simplified-setup-step-1
   reset-ticks
   clear-all-plots
   random-seed new-seed
-  type "Finished setup process\n"
+
 end
 
 to simplified-setup-step-2
@@ -1314,6 +1320,10 @@ to simplified-setup-step-2
   ask realtors [draw-circle RealtorTerritory]
   set visualiseMode "Prices"
   update-visualisation
+  set setup-a 1
+  set setup-b 1
+  random-seed new-seed
+  type "Applied Setup step 2\n"
 end
 
 to build-public-sectors
@@ -2265,6 +2275,10 @@ to file-record [ input-realtor the-record ]         ;; global procedure
 end
 
 to go
+  if setup-a = 0 or setup-b = 0 [
+    type "Error: Please make sure you press 'Setup step 1' then 'Setup step 2' before running the model\n"
+    stop
+  ]
   set nDiscouraged 0
   set nExit 0
   set nEntry 0
@@ -2290,7 +2304,8 @@ to go
 
     if scenario != "base-line" [type "We are at middle of simulation duration, ticks = " type ticks type ", a shock event coming in := " type scenario  print ";"]
   ]
-    step  ;; do one time step (a quarter of a year?)
+
+  if TicksPerYear > 0 [step]  ;; do one time step (a quarter of a year?)
 
   if not any? owners [ user-message(word "Finished: no remaining people" ) stop ] ;; stop if no owners or houses left
   if not any? houses [ user-message(word "Finished: no remaining houses" ) stop ]
@@ -2385,7 +2400,6 @@ end
 
 to update-income-interestPerTick
   ;;; Calculate Globals
-
   ;; calc interest per tick ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; add an exogenous cyclical interest rate, if required: varies around mean of
   ; the rate set by slider with a fixed period of 10 years
@@ -2410,6 +2424,7 @@ to update-income-interestPerTick
       set income income * (1 + (WageRise / ( TicksPerYear * 100 ))) ;; every tick, income stay the same or varied by inflation, income per year
     ]
   ]
+
 end
 
 to shock-management [oo]
@@ -5456,7 +5471,7 @@ NIL
 NIL
 NIL
 NIL
-1
+0
 
 INPUTBOX
 331
