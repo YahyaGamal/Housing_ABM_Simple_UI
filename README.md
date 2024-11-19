@@ -24,7 +24,7 @@ This repository includes the following:
 1. Download the NetLogo file through one of the following options:
     - ModelingCommons download link: [https://modelingcommons.org/browse/download_model/7502](https://modelingcommons.org/browse/download_model/7502) (make sure you export the zip file before proceeding to the next steps if you use this link)
     - OneDrive download link: [https://gla-my.sharepoint.com/:u:/g/personal/yahya_gamalaldin_glasgow_ac_uk/ETGs_7mjW2ZDkBspGyagVjwBUviDB0zzYB5X8wiZXcRJrg?e=tECnDJ](https://gla-my.sharepoint.com/:u:/g/personal/yahya_gamalaldin_glasgow_ac_uk/ETGs_7mjW2ZDkBspGyagVjwBUviDB0zzYB5X8wiZXcRJrg?e=tECnDJ)
-    - Download from GitHub by navigating to this link [https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Housing_Market_Model_S19.0.15e.nlogo](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Housing_Market_Model_S19.0.15e.nlogo). Once you load the page in you web browser, press the `...` button and press `Download` as shown below (You an also press `Ctrl + shift + s` and the file will download)
+    - Download from GitHub by navigating to this link [https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Housing_Market_Model_S19.0.15e.nlogo](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Housing_Market_Model_S19.0.15e.nlogo). Once you load the page in your web browser, press the `...` button and press `Download` as shown below (You an also press `Ctrl + shift + s` and the file will download)
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/04.png)
 
