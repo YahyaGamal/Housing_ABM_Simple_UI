@@ -1322,7 +1322,7 @@ to simplified-setup-step-2
   update-visualisation
   set setup-a 1
   set setup-b 1
-
+  random-seed new-seed
   type "Applied Setup step 2\n"
 end
 
@@ -5479,7 +5479,7 @@ INPUTBOX
 419
 618
 nYears
-300.0
+100.0
 1
 0
 Number
@@ -5544,7 +5544,7 @@ CHOOSER
 VisualiseMode
 VisualiseMode
 "Types" "Prices" "Hotspot prices (Getis-Ord)"
-1
+0
 
 TEXTBOX
 272
