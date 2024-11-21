@@ -51,7 +51,7 @@ To run the model, follow the following steps:
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/07.png)
 
-3. Press on `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time.
+3. Press on `go nYears` button.
 
 ## Notes
 - For more details, and to refer to this model, please use:
