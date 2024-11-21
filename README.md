@@ -5,21 +5,13 @@ This repository includes the following:
 - `Worlds\.`: The csv worlds files that are loaded when the `setup` button is pressed in the NetLogo interface
 
 ## Open the model 
-### Option 1: modelingcommons.com
+### Option 1: HTML
 
-1. Visit [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info). You should see the following in your web browser.
+You can access the HTML version of the model on your web browser through the following links:
+- <https://cress.soc.surrey.ac.uk/housingmarket/Housing_Market_Model.html>
+- <https://yahyagamal.github.io/Housing_ABM_Simple_UI/>
 
-![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/01.png)
-
-2. Press on the third tab (from the left) labelled as `Run in NetLogo Web`. The window below the tab should show a `Click to Run Model` message as shown below.
-
-![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/02.png)
-
-3. Press on the `Click to Run Model` message. The model UI will be loaded and should show up as shown below - Note that this may take up to a minute depending on the traffic on modelingcommons.com.
-
-![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/03.png)
-
-### Option 2: NetLogo Web App
+### Option 2: NetLogo
 
 1. Download the NetLogo file through one of the following options:
     - ModelingCommons download link: [https://modelingcommons.org/browse/download_model/7502](https://modelingcommons.org/browse/download_model/7502) (make sure you export the zip file before proceeding to the next steps if you use this link)
@@ -33,6 +25,20 @@ This repository includes the following:
 3. At the top of the page, press on the `Browse...` button as shown below. A window will open; navigate in that window to the Directory where you saved the NetLogo file you downloaded in step 1, select the NetLogo file and press `open`.
 
 ![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/05.png)
+
+### Option 3: modelingcommons.com
+
+1. Visit [https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info](https://modelingcommons.org/browse/one_model/7502#model_tabs_browse_info). You should see the following in your web browser.
+
+![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/01.png)
+
+2. Press on the third tab (from the left) labelled as `Run in NetLogo Web`. The window below the tab should show a `Click to Run Model` message as shown below.
+
+![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/02.png)
+
+3. Press on the `Click to Run Model` message. The model UI will be loaded and should show up as shown below - Note that this may take up to a minute depending on the traffic on modelingcommons.com.
+
+![Image](https://github.com/YahyaGamal/Housing_ABM_Simple_UI/blob/main/Images/03.png)
 
 ## Run the model
 
