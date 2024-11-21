@@ -54,6 +54,6 @@ To run the model, follow the following steps:
 3. Press on `go nYears` button. Please make sure you do not switch the `Baseline-type` during the run time.
 
 ## Notes
-- For more details, and to reference this model, please use:
+- For more details, and to refer to this model, please use:
     - Gamal, Yahya, Elsenbroich, Corinna, Gilbert, Nigel, Heppenstall, Alison and Zia, Kashif (2024) 'A Behavioural Agent-Based Model for Housing Markets: Impact of Financial Shocks in the UK' Journal of Artificial Societies and Social Simulation 27 (4) 5 <http://jasss.soc.surrey.ac.uk/27/4/5.html>. doi: 10.18564/jasss.5518
 - For the full model, you can visit [https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public](https://github.com/YahyaGamal/UK-housing-ABM-version-18.4.2-Public).
