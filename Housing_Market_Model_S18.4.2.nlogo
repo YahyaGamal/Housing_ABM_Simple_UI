@@ -989,6 +989,10 @@ to file-record [ input-realtor the-record ]         ;; realtor procedure
 end
 
 to go
+  if setup-a = 0 or setup-b = 0 [
+    type "Error: Please make sure you press 'Setup step 1' then 'Setup step 2' before running the model\n"
+    stop
+  ]
   set nDiscouraged 0
   set nExit 0
   set nEntry 0
@@ -1014,7 +1018,7 @@ to go
 
     if scenario != "base-line" [type "We are at middle of simulation duration, ticks = " type ticks type ", a shock event coming in := " type scenario  print ";"]
   ]
-    step  ;; do one time step (a quarter of a year?)
+  if TicksPerYear > 0 [step]  ;; do one time step (a quarter of a year?)
 
   if not any? owners [ user-message(word "Finished: no remaining people" ) stop ] ;; stop if no owners or houses left
   if not any? houses [ user-message(word "Finished: no remaining houses" ) stop ]
